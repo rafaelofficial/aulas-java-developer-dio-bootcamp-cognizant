@@ -1,20 +1,19 @@
 package com.dio.br.entities.sobrecarga;
 
+/**
+ * Classe de exemplo para o exercício da Aula 3 de Métodos
+ */
 public class Quadrilatero {
 
-    public static void area(double lado) {
-        System.out.println("A área do quadrado é: " + lado * lado);
+    public static double area(double lado) {
+        return lado * lado;
     }
 
-    public static void area(double lado1, double lado2) {
-        System.out.println("A área de um retângulo é: " + lado1 * lado2);
+    public static double area(double lado1, double lado2) {
+        return lado1 * lado2;
     }
 
-    public static void area(double baseMenor, double baseMaior, double altura) {
-        System.out.println("A área de um trapézio é: " + ((baseMaior + baseMenor) * altura) / 2);
-    }
-
-    public static void area(float diagonal1, float diagonal2) {
-        System.out.println("A área de um losango é: " + diagonal1 * diagonal2);
+    public static double area(double baseMenor, double baseMaior, double altura) {
+        return ((baseMaior + baseMenor) * altura) / 2;
     }
 }
