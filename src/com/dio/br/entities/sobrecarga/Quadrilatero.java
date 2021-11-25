@@ -1,4 +1,4 @@
-package com.dio.br.entities.sobrecarga;
+package com.dio.br.basico.application.entities.sobrecarga;
 
 /**
  * Classe de exemplo para o exercício da Aula 3 de Métodos

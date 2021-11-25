@@ -1,4 +1,4 @@
-package com.dio.br.entities.metodos;
+package com.dio.br.basico.application.entities.metodos;
 
 public class Calculadora {
 

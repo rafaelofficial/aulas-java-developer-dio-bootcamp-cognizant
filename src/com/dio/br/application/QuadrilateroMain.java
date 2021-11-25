@@ -1,6 +1,6 @@
 package com.dio.br.application;
 
-import com.dio.br.entities.sobrecarga.Quadrilatero;
+import com.dio.br.basico.application.entities.sobrecarga.Quadrilatero;
 
 public class QuadrilateroMain {
 

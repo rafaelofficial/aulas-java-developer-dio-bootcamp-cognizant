@@ -1,8 +1,8 @@
 package com.dio.br.application;
 
-import com.dio.br.entities.metodos.Calculadora;
-import com.dio.br.entities.metodos.Emprestimo;
-import com.dio.br.entities.metodos.Mensagem;
+import com.dio.br.basico.application.entities.metodos.Calculadora;
+import com.dio.br.basico.application.entities.metodos.Emprestimo;
+import com.dio.br.basico.application.entities.metodos.Mensagem;
 
 public class Main {
 
