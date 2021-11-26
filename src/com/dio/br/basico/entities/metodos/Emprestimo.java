@@ -1,4 +1,4 @@
-package com.dio.br.basico.application.entities.metodos;
+package com.dio.br.basico.entities.metodos;
 
 public class Emprestimo {
 
