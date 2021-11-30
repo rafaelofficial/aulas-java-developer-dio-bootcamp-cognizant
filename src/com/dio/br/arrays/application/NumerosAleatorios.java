@@ -1,7 +1,6 @@
 package com.dio.br.arrays.application;
 
 import java.util.Random;
-import java.util.Scanner;
 
 /**
  * Faça um programa que leia 20 números inteiros aleatórios (entre 0 e 100), armazene-os num vetor.
