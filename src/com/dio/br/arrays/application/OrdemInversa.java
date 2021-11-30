@@ -1,7 +1,5 @@
 package com.dio.br.arrays.application;
 
-import java.util.Scanner;
-
 /**
  * Crie um vetor de 6 números e mostre-os na ordem inversa.
  */
