@@ -25,9 +25,7 @@ public class Loops {
 
         System.out.println("\nFOR DE 3 ATÉ 11");
         for (int i = 3; i <= 11; i = i + 2) {
-            if (i == 7) {
-                continue;
-            }
+            if (i == 7) continue;
             System.out.println("O valor de i é: " + i);
         }
 
