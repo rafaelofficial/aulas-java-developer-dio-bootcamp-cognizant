@@ -15,7 +15,7 @@ public class Arrays {
 
         Random random = new Random();
 
-        int[] idades = new int[] {27, 16, 18, 53, 32, 10, 22, 25};
+        int[] idades = new int[] {27, 16, 18, 12, 32, 10, 22, 25};
         String[] nomes = new String[] {"Julia", "Pedro", "Samuel"};
         int[][] matriz = new int[4][4];
 
