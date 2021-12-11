@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="maven.idea.plugin" type="repository">
+    <properties maven-id="maven:maven-idea-plugin:1.7" />
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/maven-idea-plugin-1.7.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/maven-idea-plugin-1.7-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
