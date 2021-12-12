@@ -21,7 +21,7 @@ import java.util.Scanner;
  *
  * Sao Paulo
  */
-public class DDD {
+public class CodigoDosEstadosBrasileiros {
 
     public static void main(String[] args) throws IOException {
         Scanner leitor = new Scanner(System.in);
