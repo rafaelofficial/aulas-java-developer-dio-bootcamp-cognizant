@@ -30,6 +30,7 @@ public class Fila {
                     break;
                 }
             }
+            return primeiroNo;
         }
         return null;
     }
@@ -71,7 +72,7 @@ public class Fila {
 
         if (referenciaEntradaFila != null) {
             while (true) {
-                stringRetorno = "[ Nó { objeto = " + noAuxiliar.getObjeto() + " } ] ---->";
+                stringRetorno += "[ Nó { objeto = " + noAuxiliar.getObjeto() + " } ] ---->";
                 if (noAuxiliar.getReferenciaNo() != null) {
                     noAuxiliar = noAuxiliar.getReferenciaNo();
                 } else {
