@@ -6,10 +6,10 @@ public class Program {
 
         Fila minhaFila = new Fila();
 
-        minhaFila.enqueue(new No("1 - Maria"));
-        minhaFila.enqueue(new No("2 - João"));
-        minhaFila.enqueue(new No("3 - Pedro"));
-        minhaFila.enqueue(new No("4 - Júlia"));
+        minhaFila.enqueue("1 - Maria");
+        minhaFila.enqueue("2 - João");
+        minhaFila.enqueue("3 - Pedro");
+        minhaFila.enqueue("4 - Júlia");
         System.out.println("---------FILA---------");
         System.out.println(minhaFila);
 
@@ -19,7 +19,7 @@ public class Program {
         System.out.println("\n---------FILA---------");
         System.out.println(minhaFila);
 
-        minhaFila.enqueue(new No("5 - Francisco (último da fila)"));
+        minhaFila.enqueue("5 - Francisco (último da fila)");
         System.out.println("\n---------FILA---------");
         System.out.println(minhaFila);
 

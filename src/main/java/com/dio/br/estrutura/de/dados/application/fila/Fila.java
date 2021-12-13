@@ -9,9 +9,10 @@ public class Fila {
     }
 
     /**
-     * @param novoNo responsável por adicionar um novo elemento na fila
+     * @param obj responsável por adicionar um novo elemento na fila
      */
-    public void enqueue(No novoNo) {
+    public void enqueue(Object obj) {
+        No novoNo = new No(obj);
         novoNo.setReferenciaNo(referenciaEntradaFila);
         referenciaEntradaFila = novoNo;
     }
@@ -19,7 +20,7 @@ public class Fila {
     /**
      * @return retorna o primeiro elemento da fila
      */
-    public No first() {
+    public Object first() {
         if (!this.isEmpty()) {
             No primeiroNo = referenciaEntradaFila;
 
@@ -30,7 +31,7 @@ public class Fila {
                     break;
                 }
             }
-            return primeiroNo;
+            return primeiroNo.getObjeto();
         }
         return null;
     }
@@ -38,7 +39,7 @@ public class Fila {
     /**
      * @return exclui o primeiro elemento da fila
      */
-    public No dequeue() {
+    public Object dequeue() {
         if (!this.isEmpty()) {
             No primeiroNo = referenciaEntradaFila;
             No noAuxiliar = referenciaEntradaFila;
@@ -52,7 +53,7 @@ public class Fila {
                     break;
                 }
             }
-            return primeiroNo;
+            return primeiroNo.getObjeto();
         }
         return null;
     }
