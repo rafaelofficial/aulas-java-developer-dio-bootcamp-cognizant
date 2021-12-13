@@ -44,4 +44,26 @@ public class Pilha {
         return referenciaNoEntradaPilha == null ? true : false;
     }
 
+    // constroi a pilha
+    @Override
+    public String toString() {
+
+        String stringDeRetorno = "----------------------------\n";
+        stringDeRetorno += "      PILHA:\n";
+        stringDeRetorno += "----------------------------\n";
+
+        No noAuxiliar = referenciaNoEntradaPilha;
+
+        while (true) {
+            if (noAuxiliar != null) {
+                stringDeRetorno += "[ Nó: { dado = " + noAuxiliar.getDado() + " } ]\n";
+                noAuxiliar = noAuxiliar.getReferenciaNo();
+            } else {
+                break;
+            }
+        }
+        stringDeRetorno += "----------------------------\n";
+        return stringDeRetorno;
+    }
+
 }
