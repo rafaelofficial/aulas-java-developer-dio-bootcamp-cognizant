@@ -1,8 +1,8 @@
 package com.dio.br.estrutura.de.dados.application.fila;
 
-public class Fila {
+public class Fila<T> {
 
-    private No referenciaEntradaFila;
+    private No<T> referenciaEntradaFila;
 
     public Fila() {
         this.referenciaEntradaFila = null;
@@ -11,8 +11,8 @@ public class Fila {
     /**
      * @param obj responsável por adicionar um novo elemento na fila
      */
-    public void enqueue(Object obj) {
-        No novoNo = new No(obj);
+    public void enqueue(T obj) {
+        No<T> novoNo = new No<T>(obj);
         novoNo.setReferenciaNo(referenciaEntradaFila);
         referenciaEntradaFila = novoNo;
     }
@@ -20,9 +20,9 @@ public class Fila {
     /**
      * @return retorna o primeiro elemento da fila
      */
-    public Object first() {
+    public T first() {
         if (!this.isEmpty()) {
-            No primeiroNo = referenciaEntradaFila;
+            No<T> primeiroNo = referenciaEntradaFila;
 
             while (true) {
                 if (primeiroNo.getReferenciaNo() != null) {
@@ -31,7 +31,7 @@ public class Fila {
                     break;
                 }
             }
-            return primeiroNo.getObjeto();
+            return (T)primeiroNo.getObjeto();
         }
         return null;
     }
@@ -39,10 +39,10 @@ public class Fila {
     /**
      * @return exclui o primeiro elemento da fila
      */
-    public Object dequeue() {
+    public T dequeue() {
         if (!this.isEmpty()) {
-            No primeiroNo = referenciaEntradaFila;
-            No noAuxiliar = referenciaEntradaFila;
+            No<T> primeiroNo = referenciaEntradaFila;
+            No<T> noAuxiliar = referenciaEntradaFila;
 
             while (true) {
                 if (primeiroNo.getReferenciaNo() != null) {
@@ -53,7 +53,7 @@ public class Fila {
                     break;
                 }
             }
-            return primeiroNo.getObjeto();
+            return (T)primeiroNo.getObjeto();
         }
         return null;
     }
@@ -69,7 +69,7 @@ public class Fila {
     @Override
     public String toString() {
         String stringRetorno = "";
-        No noAuxiliar = referenciaEntradaFila;
+        No<T> noAuxiliar = referenciaEntradaFila;
 
         if (referenciaEntradaFila != null) {
             while (true) {

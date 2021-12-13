@@ -4,7 +4,7 @@ public class Program {
 
     public static void main(String[] args) {
 
-        Fila minhaFila = new Fila();
+        Fila<String> minhaFila = new Fila<>();
 
         minhaFila.enqueue("1 - Maria");
         minhaFila.enqueue("2 - João");

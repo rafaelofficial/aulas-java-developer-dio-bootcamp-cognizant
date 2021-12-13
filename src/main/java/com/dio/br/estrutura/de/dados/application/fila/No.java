@@ -1,14 +1,14 @@
 package com.dio.br.estrutura.de.dados.application.fila;
 
-public class No {
+public class No<T> {
 
-    private Object objeto;
-    private No referenciaNo;
+    private T objeto;
+    private No<T> referenciaNo;
 
     public No() {
     }
 
-    public No(Object objeto) {
+    public No(T objeto) {
         this.referenciaNo = null;
         this.objeto = objeto;
     }
@@ -17,15 +17,15 @@ public class No {
         return objeto;
     }
 
-    public void setObjeto(Object objeto) {
+    public void setObjeto(T objeto) {
         this.objeto = objeto;
     }
 
-    public No getReferenciaNo() {
+    public No<T> getReferenciaNo() {
         return referenciaNo;
     }
 
-    public void setReferenciaNo(No referenciaNo) {
+    public void setReferenciaNo(No<T> referenciaNo) {
         this.referenciaNo = referenciaNo;
     }
 
