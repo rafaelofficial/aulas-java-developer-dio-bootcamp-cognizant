@@ -26,6 +26,24 @@ public class ListaEncadeada<T> {
     }
 
     /**
+     * Método interno
+     * @param index passa o índice na assinatura do método
+     * @return retorna o índice para o próximo nó
+     */
+    private No<T> getNo(int index) {
+        validaIndice(index);
+
+        No<T> noAuxiliar = referenciaEntrada;
+        No<T> noDeRetorno = null;
+
+        for (int i = 0; i < this.size() - 1; i++) {
+            noDeRetorno = noAuxiliar;
+            noAuxiliar = noAuxiliar.getProximoNo();
+        }
+        return noDeRetorno;
+    }
+
+    /**
      * @return retorna o tamanho da lista
      */
     public int size() {
@@ -44,6 +62,17 @@ public class ListaEncadeada<T> {
             }
         }
         return tamanhoDaLista;
+    }
+
+    /**
+     * Método interno
+     * @param index faz a validação do índice da lista encadeada
+     */
+    private void validaIndice(int index) {
+        if (index >= size()) {
+            int ultimoIndice = size() - 1;
+            throw new IndexOutOfBoundsException("Não existe conteúdo no índice: " + index + " desta lista. A lista vai até o índice: " + ultimoIndice);
+        }
     }
 
     /**
