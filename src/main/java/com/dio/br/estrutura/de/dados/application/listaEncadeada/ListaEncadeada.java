@@ -26,7 +26,7 @@ public class ListaEncadeada<T> {
     }
 
     /**
-     * @param index passar o índice na assinatura do método
+     * @param index pega o nó num determinado índice
      * @return retorna o conteúdo do índice
      */
     public T get(int index) {
@@ -35,7 +35,7 @@ public class ListaEncadeada<T> {
 
     /**
      * Método interno
-     * @param index passar o índice na assinatura do método
+     * @param index pega o nó num determinado índice
      * @return retorna o índice para o próximo nó
      */
     private No<T> getNo(int index) {
@@ -49,6 +49,23 @@ public class ListaEncadeada<T> {
             noAuxiliar = noAuxiliar.getProximoNo();
         }
         return noDeRetorno;
+    }
+
+    /**
+     *
+     * @param index passar qual o índice que será removido
+     * @return retorna o conteúdo do elemento removido
+     */
+    public T remove(int index) {
+        No<T> noPivor = this.getNo(index);
+        if (index == 0) {
+            referenciaEntrada = noPivor.getProximoNo();
+            return noPivor.getConteudo();
+        }
+
+        No<T> noAnterior = getNo(- 1);
+        noAnterior.setProximoNo(noPivor.getProximoNo());
+        return noPivor.getConteudo();
     }
 
     /**
