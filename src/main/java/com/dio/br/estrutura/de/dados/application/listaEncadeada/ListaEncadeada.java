@@ -26,8 +26,16 @@ public class ListaEncadeada<T> {
     }
 
     /**
+     * @param index passar o índice na assinatura do método
+     * @return retorna o conteúdo do índice
+     */
+    public T get(int index) {
+        return getNo(index).getConteudo();
+    }
+
+    /**
      * Método interno
-     * @param index passa o índice na assinatura do método
+     * @param index passar o índice na assinatura do método
      * @return retorna o índice para o próximo nó
      */
     private No<T> getNo(int index) {
