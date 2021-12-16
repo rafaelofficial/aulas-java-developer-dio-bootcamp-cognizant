@@ -106,4 +106,18 @@ public class ListaEncadeada<T> {
         return referenciaEntrada == null ? true : false;
     }
 
+    /**
+     *
+     * @return constrói a lista e retorna a string no console
+     */
+    @Override
+    public String toString() {
+        String strRetorno = "";
+        No<T> noAuxiliar = referenciaEntrada;
+        for (int i = 0; i < this.size(); i++) {
+            strRetorno += "[ Nó { " + "Conteúdo = " + noAuxiliar.getConteudo() + " } ] ---->";
+            noAuxiliar = noAuxiliar.getProximoNo();
+        }
+        return strRetorno;
+    }
 }
