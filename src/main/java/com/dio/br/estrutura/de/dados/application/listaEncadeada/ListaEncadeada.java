@@ -62,7 +62,7 @@ public class ListaEncadeada<T> {
             referenciaEntrada = noPivor.getProximoNo();
             return noPivor.getConteudo();
         }
-        No<T> noAnterior = getNo(- 1);
+        No<T> noAnterior = getNo(index - 1);
         noAnterior.setProximoNo(noPivor.getProximoNo());
         return noPivor.getConteudo();
     }
@@ -118,6 +118,7 @@ public class ListaEncadeada<T> {
             strRetorno += "[ Nó { " + "Conteúdo = " + noAuxiliar.getConteudo() + " } ] ---->";
             noAuxiliar = noAuxiliar.getProximoNo();
         }
+        strRetorno += "null";
         return strRetorno;
     }
 }
