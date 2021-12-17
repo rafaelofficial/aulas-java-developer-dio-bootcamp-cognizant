@@ -23,6 +23,19 @@ public class ListaDuplamenteEncadeada<T> {
     }
 
     /**
+     * @param elemento adiciona um novo elemento na lista
+     */
+    public void add(T elemento) {
+        NoDuplo<T> novoNo = new NoDuplo<>(elemento);
+        novoNo.setNoProximo(null);
+        novoNo.setNoPrevio(ultimoNo);
+        if (primeiroNo == null) primeiroNo = novoNo;
+        if (ultimoNo != null) ultimoNo.setNoProximo(novoNo);
+        ultimoNo = novoNo;
+        tamanhoLista++;
+    }
+
+    /**
      * Método interno
      * @param index passa o índice
      * @return retorna o próximo nó da lista duplamente encadeada
@@ -39,7 +52,7 @@ public class ListaDuplamenteEncadeada<T> {
      * @return retorna o tamanho da lista
      */
     public int size() {
-        return tamanhoLista;
+        return this.tamanhoLista;
     }
 
 }
