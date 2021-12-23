@@ -61,8 +61,29 @@ public class ListaDuplamenteEncadeada<T> {
     }
 
     /**
+     * @param index remove um elemento encadeado da lista
+     */
+    public void remove(int index) {
+         if (index == 0) {
+             primeiroNo = primeiroNo.getNoProximo();
+             if (primeiroNo != null) {
+                 primeiroNo.setNoPrevio(null);
+             }
+         } else {
+             NoDuplo<T> noAuxiliar = this.getNo(index);
+             noAuxiliar.getNoPrevio().setNoProximo(noAuxiliar.getNoProximo());
+             if (noAuxiliar != ultimoNo) {
+                 noAuxiliar.getNoProximo().setNoPrevio(noAuxiliar.getNoPrevio());
+             } else {
+                 ultimoNo = noAuxiliar;
+             }
+         }
+        this.tamanhoLista--;
+    }
+
+    /**
      * Método interno
-     * @param index passa o índice
+     * @param index é passado o índice para buscar no Nó da lista
      * @return retorna o próximo nó da lista duplamente encadeada
      */
     private NoDuplo<T> getNo(int index) {
