@@ -96,10 +96,10 @@ public class ListaCircular<T> {
 
         No<T> noAuxiliar = this.cauda;
         for (int i = 0; i < this.size(); i++) {
-            strRetorno += "[ No {conteúdo=" + noAuxiliar.getConteudo() + "---->";
+            strRetorno += "[ No { conteúdo=" + noAuxiliar.getConteudo() + " } ] ---->";
             noAuxiliar = noAuxiliar.getNoProximo();
         }
-        strRetorno += this.size() != 0 ? "---->[ retorna ao início ]" : "---->[  ]";
+        strRetorno += this.size() != 0 ? "[ retorna ao início ]" : "[  ]";
         return strRetorno;
     }
 }
