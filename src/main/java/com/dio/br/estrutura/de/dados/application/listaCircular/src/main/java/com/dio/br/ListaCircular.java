@@ -6,6 +6,29 @@ public class ListaCircular<T> {
     private No<T> cauda;
     private int tamanhoLista;
 
+    public ListaCircular() {
+        this.cauda = null;
+        this.cabeca = null;
+        this.tamanhoLista = 0;
+    }
+
+    /**
+     * @param conteudo adiciona o elemento índice passado por parâmetro
+     */
+    public void add(T conteudo) {
+        No<T> novoNo = new No<>(conteudo);
+        if (this.isEmpty()) {
+            this.cabeca = novoNo;
+            this.cauda = this.cabeca;
+            this.cabeca.setNoProximo(cauda);
+        } else {
+            novoNo.setNoProximo(this.cauda);
+            this.cabeca.setNoProximo(novoNo);
+            this.cauda = novoNo;
+        }
+        this.tamanhoLista++;
+    }
+
     /**
      * @param index remove o elemento índice passado por parâmetro
      */
