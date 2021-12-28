@@ -106,7 +106,7 @@ public class ArvoreBinaria<T extends Comparable<T>> {
             if (atual == null) {
                 System.out.println("Conteúdo não encontrado! (Bloco: try) ");
             }
-
+            // Quando está na raiz, quando o nó pai estiver nulo
             if (pai == null) {
                 if (atual.getNoDireito() == null) {
                     this.raiz = atual.getNoEsquerdo();
@@ -122,6 +122,14 @@ public class ArvoreBinaria<T extends Comparable<T>> {
                     }
                     filho.setNoDireito(raiz.getNoDireito());
                     raiz = filho;
+                }
+            // Percorre a árvore
+            } else if (atual.getNoDireito() == null) {
+                // Referência pelo lado esquerdo da árvore
+                if (pai.getNoEsquerdo() == atual) {
+                    pai.setNoEsquerdo(atual.getNoEsquerdo());
+                } else {
+                    pai.setNoDireito(atual.getNoEsquerdo());
                 }
             }
 
