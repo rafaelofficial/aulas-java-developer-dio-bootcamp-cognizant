@@ -107,6 +107,24 @@ public class ArvoreBinaria<T extends Comparable<T>> {
                 System.out.println("Conteúdo não encontrado! (Bloco: try) ");
             }
 
+            if (pai == null) {
+                if (atual.getNoDireito() == null) {
+                    this.raiz = atual.getNoEsquerdo();
+                } else if (atual.getNoEsquerdo() == null) {
+                    this.raiz = atual.getNoDireito();
+                } else {
+                    for (temp = atual, filho = atual.getNoEsquerdo();
+                         filho.getNoDireito() != null; temp = filho, filho = filho.getNoEsquerdo()) {
+                        if (filho != atual.getNoEsquerdo()) {
+                            temp.setNoDireito(filho.getNoEsquerdo());
+                            filho.setNoEsquerdo(raiz.getNoEsquerdo());
+                        }
+                    }
+                    filho.setNoDireito(raiz.getNoDireito());
+                    raiz = filho;
+                }
+            }
+
         } catch (NullPointerException e) {
             System.out.println("Conteúdo não encontrado! (Bloco: catch)");
         }
