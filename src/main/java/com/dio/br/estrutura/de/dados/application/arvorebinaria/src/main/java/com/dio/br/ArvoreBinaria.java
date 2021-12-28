@@ -46,7 +46,7 @@ public class ArvoreBinaria<T extends Comparable<T>> {
     private void exibirEmOrdem(NoBinario<T> atual) {
         if (atual != null) {
             exibirEmOrdem(atual.getNoEsquerdo());
-            System.out.println(atual.getConteudo() + ", ");
+            System.out.print(atual.getConteudo() + ", ");
             exibirEmOrdem(atual.getNoDireito());
         }
     }
@@ -54,18 +54,20 @@ public class ArvoreBinaria<T extends Comparable<T>> {
     /**
      * Exibe pós ordem
      */
-    public void exibirPosOrdem() {
+    public void exibePosOrdem() {
         System.out.println("\nExibindo pós ordem...");
-        exibirEmOrdem(this.raiz);
+        exibePosOrdem(this.raiz);
     }
 
     /**
      * @param atual se caso não estiver nulo, o nó atual verifica a esqyerda, posteriormente verifica a direita e exibe o conteúdo da raiz.
      */
     private void exibePosOrdem(NoBinario<T> atual) {
-        exibirEmOrdem(atual.getNoEsquerdo());
-        exibirEmOrdem(atual.getNoDireito());
-        System.out.println(atual.getConteudo() + ", ");
+        if (atual != null) {
+            exibePosOrdem(atual.getNoEsquerdo());
+            exibePosOrdem(atual.getNoDireito());
+            System.out.print(atual.getConteudo() + ", ");
+        }
     }
 
     /**
@@ -81,7 +83,7 @@ public class ArvoreBinaria<T extends Comparable<T>> {
      */
     private void exibePreOrdem(NoBinario<T> atual) {
         if (atual != null) {
-            System.out.println(atual.getConteudo() + ", ");
+            System.out.print(atual.getConteudo() + ", ");
             exibePreOrdem(atual.getNoEsquerdo());
             exibePreOrdem(atual.getNoDireito());
         }
