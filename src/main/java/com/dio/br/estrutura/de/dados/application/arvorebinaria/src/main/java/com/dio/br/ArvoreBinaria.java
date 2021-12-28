@@ -87,6 +87,9 @@ public class ArvoreBinaria<T extends Comparable<T>> {
         }
     }
 
+    /**
+     * @param conteudo remove um nó da árvore
+     */
     public void remove(T conteudo) {
         try {
             NoBinario<T> atual = this.raiz;
@@ -125,11 +128,18 @@ public class ArvoreBinaria<T extends Comparable<T>> {
                 }
             // Percorre a árvore
             } else if (atual.getNoDireito() == null) {
-                // Referência pelo lado esquerdo da árvore
+                // Referência pelo lado direito do nó atual da árvore ser nulo
                 if (pai.getNoEsquerdo() == atual) {
                     pai.setNoEsquerdo(atual.getNoEsquerdo());
                 } else {
                     pai.setNoDireito(atual.getNoEsquerdo());
+                }
+            } else if (atual.getNoEsquerdo() == null) {
+                // Referência pelo lado esquerdo do nó atual da árvore ser nulo
+                if (pai.getNoEsquerdo() == atual) {
+                    pai.setNoEsquerdo(atual.getNoDireito());
+                } else {
+                    pai.setNoDireito(atual.getNoDireito());
                 }
             }
 
