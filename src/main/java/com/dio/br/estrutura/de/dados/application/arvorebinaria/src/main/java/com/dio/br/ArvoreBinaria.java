@@ -141,6 +141,21 @@ public class ArvoreBinaria<T extends Comparable<T>> {
                 } else {
                     pai.setNoDireito(atual.getNoDireito());
                 }
+            } else {
+                // faz o processo de remoção
+                for (temp = atual, filho = atual.getNoEsquerdo();
+                     filho.getNoDireito() != null; temp = filho, filho = filho.getNoDireito()) {
+                    if (filho != atual.getNoEsquerdo()) {
+                        temp.setNoDireito(filho.getNoEsquerdo());
+                        filho.setNoEsquerdo(atual.getNoEsquerdo());
+                    }
+                    filho.setNoDireito(atual.getNoDireito());
+                    if (pai.getNoDireito() == atual) {
+                        pai.setNoEsquerdo(filho);
+                    } else {
+                        pai.setNoDireito(filho);
+                    }
+                }
             }
 
         } catch (NullPointerException e) {
