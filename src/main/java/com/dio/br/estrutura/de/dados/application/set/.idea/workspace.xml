@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="41f43232-5e71-4389-a67c-289d70b0a2ab" name="Changes" comment="List">
-      <change beforePath="$PROJECT_DIR$/../list/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../list/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="41f43232-5e71-4389-a67c-289d70b0a2ab" name="Changes" comment="Set (HashSet)" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -106,7 +104,14 @@
       <option name="project" value="LOCAL" />
       <updated>1640748884033</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Set (HashSet)">
+      <created>1640749778381</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1640749778381</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -127,6 +132,7 @@
     <MESSAGE value="Stack" />
     <MESSAGE value="Queue" />
     <MESSAGE value="List" />
-    <option name="LAST_COMMIT_MESSAGE" value="List" />
+    <MESSAGE value="Set (HashSet)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Set (HashSet)" />
   </component>
 </project>
