@@ -1,7 +1,6 @@
-package application;
+package uncheckedexception;
 
 import javax.swing.*;
-import java.io.IOException;
 
 // faz a divisão de dois números inteiros
 public class UncheckedException {
