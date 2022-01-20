@@ -1,5 +1,7 @@
 package com.dio.br.contatos;
 
+import java.util.Objects;
+
 public class Contato {
 
     private String nome;
