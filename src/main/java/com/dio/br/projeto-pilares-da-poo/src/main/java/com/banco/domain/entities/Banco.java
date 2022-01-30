@@ -3,8 +3,8 @@ package com.banco.domain.entities;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Getter
 @Setter
@@ -18,11 +18,11 @@ public class Banco extends Conta {
     }
 
     public void listaDeClientes() {
-        List<String> clientes = new ArrayList<>();
-        for (Conta conta : contas) {
-            clientes.add(conta.getCliente().getNome());
-            System.out.println(clientes);
-        }
+        contas.stream()
+                .filter(x -> x.getCliente().getNome().equals(getCliente().getNome()))
+                .collect(Collectors.toList())
+                .forEach(c -> System.out.println(c.getCliente().getNome()))
+        ;
     }
 
     @Override
