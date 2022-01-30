@@ -1,17 +1,32 @@
 package com.banco.domain.entities;
 
+import lombok.Getter;
+import lombok.Setter;
+
+import java.util.ArrayList;
 import java.util.List;
 
-public class Banco {
+@Getter
+@Setter
+public class Banco extends Conta {
 
     private String nome;
     private List<Conta> contas;
 
-    public String getNome() {
-        return nome;
+    public Banco(Cliente cliente) {
+        super(cliente);
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void listaDeClientes() {
+        List<String> clientes = new ArrayList<>();
+        for (Conta conta : contas) {
+            clientes.add(conta.getCliente().getNome());
+            System.out.println(clientes);
+        }
+    }
+
+    @Override
+    public void imprimirExtrato() {
+        System.out.println("=== Lista de Clientes ===");
     }
 }
