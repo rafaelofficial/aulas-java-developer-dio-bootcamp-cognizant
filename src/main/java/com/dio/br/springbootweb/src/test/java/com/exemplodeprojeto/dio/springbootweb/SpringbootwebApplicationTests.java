@@ -1,10 +1,10 @@
-package com.dio.swapi.estrela;
+package com.exemplodeprojeto.dio.springbootweb;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class EstrelaApplicationTests {
+class SpringbootwebApplicationTests {
 
 	@Test
 	void contextLoads() {
