@@ -1,6 +1,5 @@
-package com.dio.springboottest;
+package com.dio.springboottest.controller;
 
-import com.dio.springboottest.controller.TestController;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
