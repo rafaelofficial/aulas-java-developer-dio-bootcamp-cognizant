@@ -16,6 +16,4 @@ public class SpringBootJwtApplication {
 	public BCryptPasswordEncoder bCryptPasswordEncoder() {
 		return new BCryptPasswordEncoder();
 	}
-
-
 }
