@@ -21,6 +21,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
         this.bCryptPasswordEncoder = bCryptPasswordEncoder;
     }
 
+    // o Spring localiza o usuario pelo nome. retorna o nome, a senha e uma lista de usuários
     @Override
     public UserDetails loadUserByUsername(String userName) throws UsernameNotFoundException {
 
@@ -29,8 +30,8 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 
         return new User(userData.getUserName(), userData.getPassword(), Collections.emptyList());
     }
-    // o Spring localiza o usuario pelo nome. retorna o nome, a senha e uma lista de usuários
 
+    // método responsável por encriptar a senha do usuário
     private UserData findUser(String userName) {
 
         UserData userData = new UserData();
@@ -39,8 +40,8 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 
         return userData;
     }
-    // método responsável por encriptar a senha do usuário
 
+    // criar uma lista de usuários
     public List<UserData> listUsers() {
 
         ArrayList<UserData> list = new ArrayList<>();
@@ -48,5 +49,4 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 
         return list;
     }
-    // criar uma lista de usuários
 }
